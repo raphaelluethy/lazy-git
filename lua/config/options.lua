@@ -43,3 +43,7 @@ vim.g.vimtex_toc_config = {
   todo_sorted = 1,
 }
 vim.g.maplocalleader = ","
+
+-- copilot setup
+vim.g.copilot_assume_mapped = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

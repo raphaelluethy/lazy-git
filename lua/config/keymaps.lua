@@ -5,11 +5,17 @@ vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "Esc" })
 vim.keymap.set("c", "<C-c>", "<Esc>", { desc = "Esc" })
 vim.keymap.set("v", "<C-c>", "<Esc>", { desc = "Esc" })
 --
-vim.keymap.set("n", "<C-b>", "<cmd>Neotree source=filesystem toggle=true <CR>", { silent = true })
 
 vim.keymap.set(
   "n",
   "<leader>sx",
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Resume" }
+)
+
+vim.keymap.set(
+  "n",
+  "<leader>fg",
+  require("telescope.builtin").live_grep,
+  { noremap = true, silent = true, desc = "Search for String in Files" }
 )
